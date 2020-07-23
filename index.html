@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Testes Sheety + HandlerBar{{}}</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <style>
+        .A{color: green;}
+        .I {color: red;}
+    </style>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.getJSON('https://api.sheety.co/0784d129-8450-44be-9795-8c3c4ae5c526', function(data) {
+                var template = Handlebars.compile($('#item-template').html())
+                $('#items').html(template(data))
+            })
+        })
+    </script>
+
+           <script id="item-template" type="text/x-handlebars-template">
+        <div class="w3-container">
+            <h2>Dados API Sheety - Google Drive</h2>
+
+            <table class="w3-table w3-striped w3-bordered w3-sm">
+                <tr>
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th>Categoria</th>
+                    <th>Valor</th>
+                    <th>Observação</th>
+                    <th>Data</th>
+                </tr>
+          {{#each this}}
+                <tr>
+                    <td>{{cod}}</td>
+                    <td>{{descricao}}</td>
+                    <td>{{categoria}}</td>
+                    <td class={{status}}>{{valor}}</td>
+                    <td>{{observacao}}</td>
+                    <td>{{dt_criacao}}</td>
+                </tr>
+          {{/each}}
+            </table>
+        </div>
+    </script>
+</head>
+
+<body>
+    <div class="w3-center">
+        <h1 id="items">Carregando...</h1>
+    </div>
+</body>
+</html>

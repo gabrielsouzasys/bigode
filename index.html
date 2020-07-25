@@ -1,72 +1,98 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-	<title>Testes Sheety + HandlerBar{{}}</title>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js">
-	</script>
+<title>HTML, CSS and JavaScript demo</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="App.js"></script>
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-	<style>
-		.A {
-			color: green;
-		}
-
-		.I {
-			color: red;
-		}
-	</style>
-
-	<script type="text/javascript">
-		$(document).ready(function() {
-            $.getJSON('https://api.sheety.co/0784d129-8450-44be-9795-8c3c4ae5c526', function(data) {
-                var template = Handlebars.compile($('#item-template').html())
-                $('#items').html(template(data))
-            })
-        })
-	</script>
-
-	<script id="item-template" type="text/x-handlebars-template">
-		<div class="w3-container">
-            <h2>Dados API Sheety - Google Drive</h2>
-
-            <table class="w3-table w3-striped w3-bordered w3-sm">
-                <tr>
-                    <th>Código</th>
-                    <th>Descrição</th>
-                    <th>Categoria</th>
-                    <th>Valor</th>
-                    <th>Observação</th>
-                    <th>Data</th>
-                </tr>
-          {{#each this}}
-                <tr>
-                    <td>{{cod}}</td>
-                    <td>{{descricao}}</td>
-                    <td>{{categoria}}</td>
-                    <td class={{status}}>{{valor}}</td>
-                    <td>{{observacao}}</td>
-                    <td>{{dt_criacao}}</td>
-                </tr>
-          {{/each}}
-            </table>
-        </div>
-    </script>
+ 
 </head>
-<!--CODING TEST-->
 <body>
-    <!--PRE RENDERING & Handlebars-->
-	<div class="w3-center">
-		<h1 id="items">Carregando...</h1>
-	</div>
+
+<div id="v0">
+  <h1>V0</h1> 
+  <div>
+    {{testes}} 
+  </div>
+</div>
+
+<div id="v1">
+  <h1>V1</h1>	
+  <div>
+    {{testeV1}} 
+  </div>
+</div>
+
+<div id="v2">
+  <h1>V2</h1>	
+  <div>
+    {{data_v2.dados_v2.name}} {{data_v2.dados_v2.last}}
+  </div>
+</div>
+
+<ul id="v3">
+  <h4>Testes Lista</h4>
+  {{#each data_v3}}
+  <li>{{username}} {{data_v3.dados_v3.0.email}}</li>
+  {{/each}}
+</ul>
+
+<table id="v4">
+  <tr>
+        <th>Testes Tabela</th>
+    </tr>
+    {{#each dados}}
+        <tr>
+            <td>{{this}}</td>
+        </tr>
+    {{/each}}
+</table> 
+
+
+
+
+<!-- 
+<script id="Handlebars-Template" type="text/x-handlebars-template">
+    <div id="Content">
+      <h1>&Xi;RecipeCards 
+        <span id='BOS'>Recipe search powered by 
+            <a id='Logo' href='http://www.yummly.com/recipes'>
+                <img src='http://static.yummly.com/api-logo.png'/>
+            </a>
+        </span>
+      </h1>
+      {{#each Recipes}}
+        <div class='Box'>
+            <img class='Thumb' src="{{{Image}}}" alt="{{Name}}">
+            <h3>{{Name}} <a id='Logo' href="{{Source.Url}}"> - {{Source.Name}}</a></h3>
+            <h5>{{getFlavor Flavors}}</h5>
+            <h5>{{Yield}}</h5>
+            <p>Ingredients:</p>
+            <ul>
+                {{#each Ingredients}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+      {{/each}}
+    </div>
+</script> -->
+
+
+
+<!-- 
+
+// Write JavaScript here 
+document.addEventListener("DOMContentLoaded", function(event) { 
+  //do work
+  //alert('teste')
+});
+ -->
+ 
 </body>
 <footer>
-    <script>
-        var teste = () = {
-            alert("testes");
-        };
 
-    </script>
-
+   <script type="text/javascript" src="App.js"></script>  
 </footer>
 </html>

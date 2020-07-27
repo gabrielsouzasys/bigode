@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>HTML, CSS and JavaScript demo</title>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script type="text/javascript" src="App.js"></script>
-	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
- 
+    <title>HTML, CSS and JavaScript demo</title>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="App.js"></script>
+    <script type="text/javascript" src="handlebars.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
+
 <body>
 
-<div id="v0">
-  <h1>V0</h1> 
-  <div>
-    {{testes}} 
-  </div>
-</div>
+    <div id="v0">
+        <h1>V0</h1>
+        <div>
+            {{testes}}
+        </div>
+    </div>
 
-<div id="v1">
-  <h1>V1</h1>	
-  <div>
-    {{testeV1}} 
-  </div>
-</div>
+    <div id="v1">
+        <h1>V1</h1>
+        <div>
+            {{testeV1}}
+        </div>
+    </div>
 
-<div id="v2">
-  <h1>V2</h1>	
-  <div>
-    {{data_v2.dados_v2.name}} {{data_v2.dados_v2.last}}
-  </div>
-</div>
+    <div id="v2">
+        <h1>V2</h1>
+        <div>
+            {{data_v2.dados_v2.name}} {{data_v2.dados_v2.last}}
+        </div>
+    </div>
 
-<ul id="v3">
-  <h4>Testes Lista</h4>
-  {{#each data_v3}}
-  <li>{{username}} {{data_v3.dados_v3.0.email}}</li>
-  {{/each}}
-</ul>
+    <ul id="v3">
+        <h4>Testes Lista</h4>
+        {{#each data_v3}}
+        <li>{{username}} {{data_v3.dados_v3.0.email}}</li>
+        {{/each}}
+    </ul>
 
-<table id="v4">
-  <tr>
-        <th>Testes Tabela</th>
-    </tr>
-    {{#each dados}}
+    <table id="v4">
+        <tr>
+            <th>Testes Tabela</th>
+        </tr>
+        {{#each dados}}
         <tr>
             <td>{{this}}</td>
         </tr>
-    {{/each}}
-</table> 
+        {{/each}}
+    </table>
 
 
 
 
-<!-- 
+    <!-- 
 <script id="Handlebars-Template" type="text/x-handlebars-template">
     <div id="Content">
       <h1>&Xi;RecipeCards 
@@ -81,7 +84,7 @@
 
 
 
-<!-- 
+    <!-- 
 
 // Write JavaScript here 
 document.addEventListener("DOMContentLoaded", function(event) { 
@@ -89,10 +92,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   //alert('teste')
 });
  -->
- 
+
 </body>
 <footer>
 
-   <script type="text/javascript" src="App.js"></script>  
+    <script type="text/javascript" src="App.js"></script>
 </footer>
+
 </html>

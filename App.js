@@ -46,3 +46,9 @@ document.getElementById('v1').innerHTML = HTML1;
 document.getElementById('v2').innerHTML = HTML2;
 document.getElementById('v3').innerHTML = HTML3;
 document.getElementById('v4').innerHTML = HTML4;
+
+console.log(HTML0);
+console.log(HTML1);
+console.log(HTML2);
+console.log(HTML3);
+console.log(HTML4);

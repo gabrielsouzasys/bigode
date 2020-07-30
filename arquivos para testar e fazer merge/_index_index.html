@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML, CSS and JavaScript demo</title>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="App.js"></script>
+    <script type="text/javascript" src="handlebars.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+
+    <div id="v0">
+        <h1>V0</h1>
+        <div>
+            {{passa_parametro}}
+        </div>
+    </div>
+
+    <div id="v1">
+        <h1>V1</h1>
+        <div>
+            {{titulo}}
+            <ul>
+                <li>{{li1}}</li>
+                <li>{{li2}}</li>
+                <li>{{li3}}</li>
+            </ul>
+        </div>
+    </div>
+
+        <h1>V2</h1>
+    <div id="v2">
+         {{#each users}}
+            <div>{{firstName}} {{lastName}}</div>
+         {{/each}}
+      <!--   <div>
+            {{data_v2.dados_v2.name}} {{data_v2.dados_v2.last}} 
+        </div> -->
+    </div>
+
+    <div>
+        
+         <h1>V3</h1>
+    <ul id="v3">
+        
+        {{#each dados_v3}}
+        <li>{{username}} {{data_v3.dados_v3.0.email}} {{email}}</li>
+        {{/each}}
+    </ul>
+    </div>
+
+ <h1>V4</h1>
+    <table id="v4">
+        <tr>
+            <th>Testes Tabela + {{data_v4.0.state}}</th>
+        </tr>
+        {{#each dados}}
+        <tr>
+            <td>{{this}}</td>
+        </tr>
+        {{/each}}
+    </table>
+
+
+
+
+    <!-- 
+<script id="Handlebars-Template" type="text/x-handlebars-template">
+    <div id="Content">
+      <h1>&Xi;RecipeCards 
+        <span id='BOS'>Recipe search powered by 
+            <a id='Logo' href='http://www.yummly.com/recipes'>
+                <img src='http://static.yummly.com/api-logo.png'/>
+            </a>
+        </span>
+      </h1>
+      {{#each Recipes}}
+        <div class='Box'>
+            <img class='Thumb' src="{{{Image}}}" alt="{{Name}}">
+            <h3>{{Name}} <a id='Logo' href="{{Source.Url}}"> - {{Source.Name}}</a></h3>
+            <h5>{{getFlavor Flavors}}</h5>
+            <h5>{{Yield}}</h5>
+            <p>Ingredients:</p>
+            <ul>
+                {{#each Ingredients}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+      {{/each}}
+    </div>
+</script> -->
+
+
+
+    <!-- 
+
+// Write JavaScript here 
+document.addEventListener("DOMContentLoaded", function(event) { 
+  //do work
+  //alert('teste')
+});
+ -->
+
+</body>
+<footer>
+
+    <script type="text/javascript" src="App.js"></script>
+</footer>
+
+</html>
